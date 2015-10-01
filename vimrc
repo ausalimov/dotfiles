@@ -7,7 +7,7 @@ function! NumberToggle()
 	if(&relativenumber == 1)
 		set number
 	else
-		set relativenumber
+		set rnu
 	endif
 endfunc
 
