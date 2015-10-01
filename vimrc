@@ -1,10 +1,10 @@
- 
 execute pathogen#infect()
 syntax on
 filetype plugin on	
 
+
 function! NumberToggle()
-	if(&relativenumber == 1)
+	if(&relativenumber == 1 && version >= 703)
 		set number
 	else
 		set relativenumber
