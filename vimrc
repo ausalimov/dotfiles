@@ -28,7 +28,7 @@ augroup END
 
 " turns off bells 
 set vb t_vb=
-set relativenumber
+set number
 
 set hidden
 
