@@ -17,7 +17,7 @@ function! NumberToggle()
 	if(&relativenumber == 1 && version >= 703)
 		set number
 	else
-		set relativenumber
+		set rnu
 	endif
 endfunc
 
@@ -38,7 +38,7 @@ augroup END
 
 " turns off bells 
 set vb t_vb=
-set relativenumber
+set number
 
 set hidden
 
