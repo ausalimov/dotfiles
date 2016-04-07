@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/alansalimov/personal_site/app/views/welcome'
-let g:netrw_dirhist_2='/Users/alansalimov/.dotfiles/vim'
-let g:netrw_dirhist_3='/home/asalimov/.dotfiles/vim/autoload'
-let g:netrw_dirhist_4='/root/dotfiles/vim/.vim'
-let g:netrw_dirhist_5='/root/dotfiles/vim'
-let g:netrw_dirhist_6='/root/dotfiles/vim/..'
+let g:netrw_dirhist_cnt =0
