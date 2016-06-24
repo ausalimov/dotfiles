@@ -68,3 +68,7 @@ inoremap <C-c> <NOP>
 map <SPACE> <Leader>
 map ; :
 
+" for saving files on root easily 
+map <Leader>z :w !sudo tee %<CR>
+
+
