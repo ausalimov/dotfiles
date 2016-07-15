@@ -13,6 +13,19 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" Sets the fold method to indent 
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+function! FoldTypeToggle()
+    if(&foldmethod == "syntax")
+        set foldmethod=indent
+    else 
+        set foldmethod=syntax
+    endif
+endfunc
 
 function! NumberToggle()
 	if(&relativenumber == 1 && version >= 703)
@@ -35,6 +48,10 @@ augroup text
 	au Filetype markdown call SetProseOptions()
 augroup END
 
+au FocusLost * :set number
+au FocusGained * :set relativenumber
+
+
 
 
 " turns off bells 
@@ -48,8 +65,9 @@ let mapleader = ","
 inoremap jj <Esc>
 
 
-noremap <Leader>n :call NumberToggle()<cr>)
+noremap <Leader>n :call NumberToggle()<cr>
 noremap <Leader>s :update<CR>
+noremap <Leader>z :call FoldTypeToggle()<cr>
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>t :ls<CR>:sb
 nnoremap <Leader>y :ls<CR>:vert sb
@@ -64,11 +82,10 @@ inoremap <Right> <NOP>
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <C-c> <NOP>
+inoremap <ESC> <NOP>
 
 map <SPACE> <Leader>
 map ; :
 
-" for saving files on root easily 
-map <Leader>z :w !sudo tee %<CR>
 
 
