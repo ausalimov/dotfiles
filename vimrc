@@ -22,13 +22,15 @@ set foldlevel=2
 function! FoldTypeToggle()
     if(&foldmethod == "syntax")
         set foldmethod=indent
+        echom "set fold indent" 
     else 
         set foldmethod=syntax
+        echom "set fold syntax" 
     endif
 endfunc
 
 function! NumberToggle()
-	if(&relativenumber == 1 && version >= 703)
+	if(&relativenumber == 1) 
 		set number
 	else
 		set rnu
