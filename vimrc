@@ -67,6 +67,8 @@ let mapleader = ","
 inoremap jj <Esc>
 
 map <Leader>g :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+set wildignore=*.o,*.obj,*.bak,*.exe,*.aux,*.dvi,*.a
+
 
 noremap <Leader>n :call NumberToggle()<cr>
 noremap <Leader>s :update<CR>
