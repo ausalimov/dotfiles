@@ -13,9 +13,24 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" Sets the fold method to indent 
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+function! FoldTypeToggle()
+    if(&foldmethod == "syntax")
+        set foldmethod=indent
+        echom "set fold indent" 
+    else 
+        set foldmethod=syntax
+        echom "set fold syntax" 
+    endif
+endfunc
 
 function! NumberToggle()
-	if(&relativenumber == 1 && version >= 703)
+	if(&relativenumber == 1) 
 		set number
 	else
 		set rnu
@@ -39,9 +54,13 @@ let mapleader = ","
 
 inoremap jj <Esc>
 
+map <Leader>g :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+set wildignore=*.o,*.obj,*.bak,*.exe,*.aux,*.dvi,*.a
 
-noremap <Leader>n :call NumberToggle()<cr>)
+
+noremap <Leader>n :call NumberToggle()<cr>
 noremap <Leader>s :update<CR>
+noremap <Leader>z :call FoldTypeToggle()<cr>
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>t :ls<CR>:sb
 nnoremap <Leader>y :ls<CR>:vert sb
@@ -56,7 +75,10 @@ inoremap <Right> <NOP>
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <C-c> <NOP>
+inoremap <ESC> <NOP>
 
 map <SPACE> <Leader>
 map ; :
+
+
 
