@@ -28,14 +28,6 @@ function! SetProseOptions()
 	setlocal wrapmargin=0
 endfunc
 
-augroup text 
-	au BufNewFile,BufRead *.md setfiletype markdown
-	au BufNewFile,BufRead *.txt setfiletype text
-	au Filetype text call SetProseOptions()
-	au Filetype markdown call SetProseOptions()
-augroup END
-
-
 
 " turns off bells 
 set vb t_vb=
