@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/alansalimov/Documents/onboardsdk'
 let g:netrw_dirhist_2='/etc/ros/rosdep/sources.list.d'
 let g:netrw_dirhist_3='/opt/ros/kinetic'
 let g:netrw_dirhist_4='/home/alansalimov/Documents/osdk-ros/dji_sdk/launch'
 let g:netrw_dirhist_5='/home/alansalimov/Documents/osdk-ros'
+let g:netrw_dirhist_6='/Users/alansalimov/Documents/CS148/CS148/assets/wooden_armchair'
+let g:netrw_dirhist_7='/Users/alansalimov/Documents/CS148/cs148raytracer-public/assignment5_old2'
+let g:netrw_dirhist_8='/Users/alansalimov/vagrant_heretrix/bootstrap.sh'
+let g:netrw_dirhist_9='/Users/alansalimov/dotfiles'

@@ -1,0 +1,3 @@
+[submodule "vim/bundle/cscope_maps"]
+	path = vim/bundle/cscope_maps
+	url = https://github.com/chazy/cscope_maps.git
