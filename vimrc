@@ -32,6 +32,7 @@ endfunc
 function! NumberToggle()
 	if(&relativenumber == 1) 
 		set number
+        set nornu
 	else
 		set rnu
 	endif
@@ -61,6 +62,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.aux,*.dvi,*.a
 noremap <Leader>n :call NumberToggle()<cr>
 noremap <Leader>s :update<CR>
 noremap <Leader>z :call FoldTypeToggle()<cr>
+noremap <Leader>r `
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>t :ls<CR>:sb
 nnoremap <Leader>y :ls<CR>:vert sb
