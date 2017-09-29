@@ -54,7 +54,7 @@ set hidden
 let mapleader = ","
 
 inoremap jj <Esc>
-
+ 
 map <Leader>g :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 set wildignore=*.o,*.obj,*.bak,*.exe,*.aux,*.dvi,*.a
 
